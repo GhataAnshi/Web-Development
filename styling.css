@@ -1,0 +1,44 @@
+.body
+{
+	text-align:center;
+	margin-top:50px;
+}
+.textfield
+{
+	margin-left:10px;
+	
+}
+.textfield1
+{
+	margin-left:10px;
+}
+#txtName
+{
+	margin-left:10px;
+}
+#txtEmail
+{
+	margin-left:10px;
+}
+#txtPassword
+{
+	margin-left:10px;
+}
+#txtPhone
+{
+	margin-left:10px;
+}
+#btnLogin
+{
+	margin-left:10px;
+}
+#btnSignUp
+{
+	margin-left:10px;
+}
+#loginProgress
+{
+	display:none;
+	text-align:center;
+	margin-top:10px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="styling.css">
+<link rel="stylesheet" type="text/css" href="sweetalert.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+</head>
+<body class="body">
+<div class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input id="txtName" class="mdl-textfield__input" type="text" autofocus="on" required="">
+    <label class="textfield mdl-textfield__label">Name</label>
+  </div><br>
+<div class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input id="txtEmail" class="mdl-textfield__input" type="email" >
+    <label class="textfield mdl-textfield__label">Email</label>
+  </div><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input id="txtPassword" class="mdl-textfield__input" type="password" >
+    <label class="textfield1 mdl-textfield__label">Password</label>
+  </div><br>
+  <div class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input id="txtPhone"  class="mdl-textfield__input" type="text" pattern="(7|8|9)\d{9}" placeholder="10 digit starting with 7/8/9" >
+    <label class="textfield mdl-textfield__label">Phone</label>
+  </div><br>
+  <button id="btnSignUp" onClick="signUp()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Sign Up
+</button>
+<button id="btnLogin" onClick="location.href='index.html'"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Log In
+</button>
+<script src="sweetalert.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
