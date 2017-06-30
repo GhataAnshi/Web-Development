@@ -19,7 +19,7 @@ function signIn( t)
 	const email=txtEmail.value;
 	const pass=txtPassword.value;
 	const promise=firebase.auth().signInWithEmailAndPassword(email,pass);
-	promise.catch(function(error)
+	var m=promise.catch(function(error)
 	{  s=t+1;
 		switch(error.code)
 		{ 
@@ -28,9 +28,10 @@ function signIn( t)
 		case "auth/user-not-found": swal("There is no user corresponding to the given email.Please Sign Up"); break;
 		case "auth/wrong-password": swal("Incorrect password"); break;
 		}
+		return s;
 	});
-	if(s==0)
-		window.location="logout.html";
+	if(m==0)
+	{window.location="logout.html";}
 }
 function signUp()
 {   
