@@ -13,14 +13,14 @@
 	const txtName=document.getElementById("txtName");
     const txtPhone=document.getElementById("txtPhone");
 	
-function signIn( t)
+function signIn()
 {
-	var s=0;
+	 var t=0,s=0;
 	const email=txtEmail.value;
 	const pass=txtPassword.value;
 	const promise=firebase.auth().signInWithEmailAndPassword(email,pass);
-	var m=promise.catch(function(error)
-	{  s=t+1;
+	promise.catch(function(error)
+	{   s=t+1;
 		switch(error.code)
 		{ 
 		case "auth/invalid-email": swal("Invalid email address"); break;
@@ -28,10 +28,14 @@ function signIn( t)
 		case "auth/user-not-found": swal("There is no user corresponding to the given email.Please Sign Up"); break;
 		case "auth/wrong-password": swal("Incorrect password"); break;
 		}
-		return s;
+		
 	});
-	if(m==0)
-	{window.location="logout.html";}
+	check(s);
+}
+function check(s)
+{ 
+	if(s==0)
+		window.location="logout.html";
 }
 function signUp()
 {   
