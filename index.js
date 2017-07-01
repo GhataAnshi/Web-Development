@@ -13,14 +13,14 @@
 	const txtName=document.getElementById("txtName");
     const txtPhone=document.getElementById("txtPhone");
 	
-function signIn()
+function signIn(t)
 {
-	 var t=0,s=0;
+	
 	const email=txtEmail.value;
 	const pass=txtPassword.value;
 	const promise=firebase.auth().signInWithEmailAndPassword(email,pass);
 	promise.catch(function(error)
-	{   s=t+1;
+	{   t=1;
 		switch(error.code)
 		{ 
 		case "auth/invalid-email": swal("Invalid email address"); break;
@@ -30,7 +30,7 @@ function signIn()
 		}
 		
 	});
-	check(s);
+	check(t);
 }
 function check(s)
 { 
